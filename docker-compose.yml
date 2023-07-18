@@ -1,0 +1,13 @@
+version: '3'
+services:
+  mysql:
+    image: mysql:latest
+    container_name: words-db-2
+    env_file:
+      - ./app.env
+    ports:
+      - '3306:3306'
+    volumes:
+      - mysql_db:/var/lib/mysql2
+volumes:
+  mysql_db:
